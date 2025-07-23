@@ -312,8 +312,21 @@ nav {
 
     .menu {
         display: none;
+
     }
+
+    header {
+        min-height: 48px !important;
+        padding: 3px 12px !important;
+    }
+
+    .logo img {
+        max-height: 32px;
+        width: auto;
+    }
+
 }
+
 
 
 
