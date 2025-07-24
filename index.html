@@ -8,7 +8,73 @@
     <link rel="stylesheet" href="css/style.css">
     <link rel="shortcut icon" type="image/png" href="assets/sparkle_icon.png">
     <style>
+        /* Estilos para o menu mobile */
+        .menu-toggle {
+            display: none;
+            flex-direction: column;
+            justify-content: space-between;
+            width: 30px;
+            height: 21px;
+            background: transparent;
+            border: none;
+            cursor: pointer;
+            padding: 0;
+            z-index: 20;
+            position: absolute;
+            right: 20px;
+            top: 50%;
+            transform: translateY(-50%);
+        }
 
+        .bar {
+            height: 3px;
+            width: 100%;
+            background-color: #e94f37;
+            border-radius: 10px;
+            transition: all 0.3s ease-in-out;
+        }
+
+        @media (max-width: 900px) {
+            .menu-toggle {
+                display: flex;
+            }
+
+            .menu {
+                position: fixed;
+                right: -100%;
+                top: 0;
+                width: 70%;
+                max-width: 300px;
+                height: 100vh;
+                background-color: #fff;
+                flex-direction: column;
+                padding-top: 80px;
+                transition: right 0.3s ease;
+                box-shadow: -5px 0 15px rgba(0, 0, 0, 0.1);
+                z-index: 10;
+                display: flex;
+            }
+
+            .menu.active {
+                right: 0;
+            }
+
+            .menu li {
+                margin: 10px 0;
+            }
+
+            .menu-toggle.active .bar:nth-child(1) {
+                transform: translateY(9px) rotate(45deg);
+            }
+
+            .menu-toggle.active .bar:nth-child(2) {
+                opacity: 0;
+            }
+
+            .menu-toggle.active .bar:nth-child(3) {
+                transform: translateY(-9px) rotate(-45deg);
+            }
+        }
     </style>
     <!-- Font Awesome for icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
@@ -26,6 +92,10 @@
 <body>
     <header>
         <div class="logo"><img src="assets/daniela_alves.PNG" alt="" width="200px"></div>
+        <button class="menu-toggle" aria-label="Menu">
+            <span class="bar"></span>
+            <span class="bar"></span>
+            <span class="bar"></span>
         </button>
         <nav>
             <ul class="menu">
@@ -162,7 +232,27 @@
 
 
     <script>
+        // Menu mobile toggle
+        const menuToggle = document.querySelector('.menu-toggle');
+        const menu = document.querySelector('.menu');
+        const body = document.body;
 
+        menuToggle.addEventListener('click', () => {
+            menuToggle.classList.toggle('active');
+            menu.classList.toggle('active');
+            body.classList.toggle('menu-open');
+        });
+
+        // Fechar menu ao clicar fora
+        document.addEventListener('click', (event) => {
+            if (menu.classList.contains('active') && 
+                !menu.contains(event.target) && 
+                !menuToggle.contains(event.target)) {
+                menuToggle.classList.remove('active');
+                menu.classList.remove('active');
+                body.classList.remove('menu-open');
+            }
+        });
 
         // Smooth scroll animation for navigation links
         document.querySelectorAll('nav .menu a').forEach(link => {
@@ -170,7 +260,11 @@
                 event.preventDefault();
                 const targetId = link.getAttribute('href').substring(1);
                 document.getElementById(targetId).scrollIntoView({ behavior: 'smooth' });
-                if (window.innerWidth <= 900) menu.classList.remove('menu-open');
+                if (window.innerWidth <= 900) {
+                    menuToggle.classList.remove('active');
+                    menu.classList.remove('active');
+                    body.classList.remove('menu-open');
+                }
             });
         });
 

@@ -264,6 +264,7 @@ header {
     top: 0;
     z-index: 10;
     min-height: 64px;
+    position: relative;
 }
 
 .logo {
@@ -309,22 +310,20 @@ nav {
 
 
 @media (max-width: 900px) {
-
-    .menu {
-        display: none;
-
-    }
-
     header {
         min-height: 48px !important;
         padding: 3px 12px !important;
+        position: relative;
     }
 
     .logo img {
         max-height: 32px;
         width: auto;
     }
-
+    
+    body.menu-open {
+        overflow: hidden;
+    }
 }
 
 
