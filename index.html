@@ -6,6 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Portfólio - Daniela Alves</title>
     <link rel="stylesheet" href="css/style.css">
+
+
     <link rel="shortcut icon" type="image/png" href="assets/sparkle_icon.png">
     <style>
         /* Estilos para o menu mobile */
@@ -175,30 +177,73 @@
         </div>
     </div>
 
-    <section id="projetos" class="projects">
-        <div class="projetos"><img src="assets/Meus_projetos.png" alt=""></div>
 
-        <div class="projects-container">
-            <div class="project-item">
-                <a href="https://dani3llla.github.io/Website-loiane-training" target="_blank">
-                    <img src="assets/Captura de Tela (1).png" alt="Projeto 1">
-                    <div class="project-hover">Website - LoianeTraining</div>
-                </a>
-            </div>
-            <div class="project-item">
-                <a href="https://dani3llla.github.io/Pagina-flexbox/" target="_blank">
-                    <img src="assets/nintendo_website1.PNG" alt="Projeto 2">
-                    <div class="project-hover">Website - Nintendo</div>
-                </a>
-            </div>
-            <div class="project-item">
-                <a href="https://dani3llla.github.io/Atividade-CSS" target="_blank">
-                    <img src="assets/Captura de Tela (3).png" alt="Projeto 3">
-                    <div class="project-hover">Website - Stardew Valley</div>
-                </a>
+
+<div id="projetos" class="projects-section">
+    <img class="projetos" src="assets/Meus_projetos.png" alt="">
+</div>
+ 
+    
+    <div class="project-grid">
+        <div class="project-card">
+            <img src="assets/Captura de Tela (1).png" alt="Projeto 2" class="project-preview"
+                onclick="openModal('Loiane Training Website', 'assets/loiane_fullwebsite.png', 'https://dani3llla.github.io/Website-loiane-training')">
+            <div class="project-info">
+                <h3 class="project-title">Loiane Training - Website</h3>
+                <p class="project-description">Projeto TCC IOS</p>
             </div>
         </div>
-    </section>
+        <div class="project-card">
+            <img src="assets/clove_home.png" alt="Clove Project" class="project-preview"
+                onclick="openModal('Clove Website', 'assets/clove_fullwebsite.png', 'https://valorant-clove.vercel.app/')">
+            <div class="project-info">
+                <h3 class="project-title">Clove Valorant - Website</h3>
+                <p class="project-description">Website moderno e responsivo desenvolvido com as melhores práticas.</p>
+            </div>
+        </div>
+        <div class="project-card">
+            <img src="assets/Captura de Tela (3).png" alt="Stardew Valley - Website" class="project-preview"
+                onclick="openModal('Stardew Valley - Website', 'assets/stardew_fullpage.png', 'https://dani3llla.github.io/Atividade-CSS')">
+            <div class="project-info">
+                <h3 class="project-title">Stardew Valley - Website</h3>
+                <p class="project-description">Descrição do terceiro projeto desenvolvido.</p>
+            </div>
+        </div>
+        <div class="project-card">
+            <img src="assets/nintendo_website.PNG" alt="Projeto 3" class="project-preview"
+                onclick="openModal('Nintendo Switch 2 - Website', 'assets/nintendo_fullpage.png', 'https://dani3llla.github.io/Pagina-flexbox')">
+            <div class="project-info">
+                <h3 class="project-title">Nintendo Switch 2 - Website</h3>
+                <p class="project-description">Descrição do terceiro projeto desenvolvido.</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal-overlay" id="modalOverlay" onclick="closeModal(event)">
+        <div class="modal" onclick="event.stopPropagation()">
+            <div class="modal-header">
+                <h2 class="modal-title" id="modalTitle">Preview do Projeto</h2>
+                <button class="btn-close" onclick="closeModal()">&times;</button>
+            </div>
+            <div class="modal-body">
+                <img id="websitePreview" src="" alt="Website Preview" class="website-preview">
+            </div>
+            <div class="modal-footer">
+                <button class="btn btn-secondary" onclick="closeModal()">Fechar</button>
+                <a id="visitSite" href="#" target="_blank" class="btn btn-visit">Visitar Site</a>
+            </div>
+        </div>
+    </div>
+
+
+
+
+
+
+
+
+
+
 
     <section id="contate-me" class="contact-section">
         <div class="contate"><img src="assets/contate_me.png" alt=""></div>
@@ -231,49 +276,7 @@
 
 
 
-    <script>
-        // Menu mobile toggle
-        const menuToggle = document.querySelector('.menu-toggle');
-        const menu = document.querySelector('.menu');
-        const body = document.body;
-
-        menuToggle.addEventListener('click', () => {
-            menuToggle.classList.toggle('active');
-            menu.classList.toggle('active');
-            body.classList.toggle('menu-open');
-        });
-
-        // Fechar menu ao clicar fora
-        document.addEventListener('click', (event) => {
-            if (menu.classList.contains('active') && 
-                !menu.contains(event.target) && 
-                !menuToggle.contains(event.target)) {
-                menuToggle.classList.remove('active');
-                menu.classList.remove('active');
-                body.classList.remove('menu-open');
-            }
-        });
-
-        // Smooth scroll animation for navigation links
-        document.querySelectorAll('nav .menu a').forEach(link => {
-            link.addEventListener('click', (event) => {
-                event.preventDefault();
-                const targetId = link.getAttribute('href').substring(1);
-                document.getElementById(targetId).scrollIntoView({ behavior: 'smooth' });
-                if (window.innerWidth <= 900) {
-                    menuToggle.classList.remove('active');
-                    menu.classList.remove('active');
-                    body.classList.remove('menu-open');
-                }
-            });
-        });
-
-        // Smooth scroll animation for "Mais Sobre" button
-        document.querySelector('.btn[href="#mais"]').addEventListener('click', (event) => {
-            event.preventDefault();
-            document.querySelector('#mais').scrollIntoView({ behavior: 'smooth' });
-        });
-    </script>
+    <script src="js/script.js"></script>
 </body>
 
 </html>

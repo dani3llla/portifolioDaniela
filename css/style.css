@@ -3,12 +3,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,100..900&display=swap');
 
 
-@font-face {
-    font-family: 'Klore';
-    src: url('../fontes/klore_demo.ttf') format('truetype');
-    font-weight: normal;
-    font-style: normal;
-}
+
 
 @font-face {
     font-family: 'typewriter';
@@ -349,17 +344,6 @@ nav {
     min-width: 280px;
 }
 
-.texto h1 {
-    font-family: 'Klore', serif;
-    font-size: 5.5rem;
-    color: #e94f37;
-    margin-bottom: 20px;
-    border-bottom: 2px solid #000;
-    /* ← aqui está a barrinha */
-    display: inline-block;
-    /* Para que a linha não ocupe tudo */
-}
-
 .imgbv {
     width: 100%;
     max-width: 450px;
@@ -369,7 +353,7 @@ nav {
     padding-bottom: 20px;
 }
 
-.projetos img {
+.projetos {
     width: 100%;
     max-width: 400px;
     margin: 0 auto;
@@ -870,11 +854,18 @@ hr {
     display: inline-block;
 }
 
-.projetos img {
+.projects-section {
+    width: 100%;
+    text-align: center;
+    padding: 40px 20px;
+}
+
+.projetos {
     width: 100%;
     max-width: 400px;
     margin: 0 auto;
     padding-bottom: 25px;
+    display: block;
 }
 
 .contate img {
@@ -889,8 +880,12 @@ hr {
         max-width: 300px;
     }
 
-    .projetos img {
-        max-width: 250px;
+    .projects-section {
+        padding: 30px 15px;
+    }
+
+    .projetos {
+        max-width: 280px;
     }
 
     .contate img {
@@ -898,13 +893,17 @@ hr {
     }
 }
 
-@media screen and (max-width: 777px) {
+@media screen and (max-width: 480px) {
     .imgbv {
         max-width: 200px;
     }
 
-    .projetos img {
-        max-width: 200px;
+    .projects-section {
+        padding: 25px 10px;
+    }
+
+    .projetos {
+        max-width: 220px;
     }
 
     .contate img {
@@ -920,3 +919,228 @@ hr {
         margin-bottom: 16px;
     }
 }
+
+
+        .project-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 30px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        @media (max-width: 768px) {
+            .project-grid {
+                grid-template-columns: 1fr;
+                gap: 20px;
+            }
+            
+            body {
+                padding: 15px;
+            }
+            
+            .modal {
+                width: 95%;
+                max-height: 85vh;
+            }
+            
+            .modal-header {
+                padding: 15px 20px;
+            }
+            
+            .modal-footer {
+                padding: 15px 20px;
+            }
+        }
+
+        @media (max-width: 1024px) and (min-width: 769px) {
+            .project-grid {
+                grid-template-columns: repeat(2, 1fr);
+                gap: 25px;
+            }
+        }
+
+        .project-card {
+            background: white;
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+            transition: transform 0.3s ease;
+        }
+
+        .project-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .project-preview {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+            cursor: pointer;
+            transition: opacity 0.3s ease;
+        }
+
+        .project-preview:hover {
+            opacity: 0.8;
+        }
+
+        .project-info {
+            padding: 20px;
+        }
+
+        .project-title {
+            font-size: 18px;
+            font-weight: bold;
+            color: #333;
+            margin-bottom: 10px;
+        }
+
+        .project-description {
+            color: #666;
+            font-size: 14px;
+        }
+
+        .modal-overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0,0,0,0.8);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            opacity: 0;
+            visibility: hidden;
+            transition: all 0.3s ease;
+            z-index: 1000;
+        }
+
+        .modal-overlay.active {
+            opacity: 1;
+            visibility: visible;
+        }
+
+        .modal {
+            background: white;
+            border-radius: 15px;
+            padding: 0;
+            max-width: 800px;
+            width: 90%;
+            max-height: 90vh;
+            position: relative;
+            transform: scale(0.7);
+            transition: all 0.3s ease;
+            box-shadow: 0 20px 60px rgba(0,0,0,0.3);
+            overflow: hidden;
+        }
+
+        .modal-overlay.active .modal {
+            transform: scale(1);
+        }
+
+        .modal-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px 30px;
+            border-bottom: 2px solid #f0f0f0;
+            background: white;
+            position: sticky;
+            top: 0;
+            z-index: 10;
+        }
+
+        .modal-title {
+            font-size: 24px;
+            color: #333;
+            font-weight: bold;
+        }
+
+        .btn-close {
+            background: none;
+            border: none;
+            font-size: 24px;
+            cursor: pointer;
+            color: #999;
+            width: 30px;
+            height: 30px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: all 0.3s ease;
+        }
+
+        .btn-close:hover {
+            background: #f0f0f0;
+            color: #333;
+        }
+
+        .modal-body {
+            max-height: 60vh;
+            overflow-y: auto;
+            padding: 0;
+        }
+
+        .website-preview {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+
+        .modal-footer {
+            display: flex;
+            gap: 15px;
+            justify-content: center;
+            padding: 20px 30px;
+            background: white;
+            border-top: 2px solid #f0f0f0;
+        }
+
+        .btn {
+            padding: 12px 25px;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            font-size: 16px;
+            transition: all 0.3s ease;
+            text-decoration: none;
+            display: inline-block;
+        }
+
+        @media (max-width: 480px) {
+            .btn {
+                padding: 10px 20px;
+                font-size: 14px;
+            }
+            
+            .modal-title {
+                font-size: 20px;
+            }
+            
+            .project-title {
+                font-size: 16px;
+            }
+            
+            .project-description {
+                font-size: 13px;
+            }
+        }
+
+        .btn-visit {
+            background-color: #cb3d27;
+            color: white;
+        }
+
+        .btn-secondary {
+            background: #f8f9fa;
+            color: #6c757d;
+            border: 1px solid #dee2e6;
+        }
+
+        .btn:hover {
+            transform: translateY(-1px);
+            color: white;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+        }
