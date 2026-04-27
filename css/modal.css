@@ -1,0 +1,103 @@
+/* Overlay escuro por trás */
+.modal__overlay {
+  display: none;
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.75);
+  z-index: 1000;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+}
+
+.modal__overlay.ativo {
+  display: flex;
+}
+
+/* Caixa do modal */
+.modal__container {
+  background: var(--branco);
+  border-radius: 12px;
+  width: 100%;
+  max-width: 700px;
+  max-height: 90vh;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  position: relative;
+  box-shadow: 0 20px 60px rgba(0,0,0,0.4);
+}
+
+/* Botão X de fechar */
+.modal__fechar {
+  position: absolute;
+  top: 12px;
+  right: 16px;
+  background: rgba(0,0,0,0.5);
+  color: var(--branco);
+  border: none;
+  border-radius: 50%;
+  width: 32px;
+  height: 32px;
+  font-size: 18px;
+  cursor: pointer;
+  z-index: 10;
+  line-height: 1;
+}
+
+/* Área da imagem com scroll */
+.modal__preview {
+  overflow-y: scroll;
+  flex: 1;
+  max-height: 55vh;
+}
+
+.modal__imagem {
+  width: 100%;
+  display: block;
+}
+
+/* Rodapé com título, descrição e botões */
+.modal__rodape {
+  padding: 20px 24px;
+  border-top: 1px solid var(--branco);
+  background: var(--branco);
+}
+
+.modal__titulo {
+  font-size: 1.2rem;
+  margin: 0 0 6px;
+}
+
+.modal__descricao {
+  font-size: 0.9rem;
+  color: var(--cinza);
+  margin: 0 0 16px;
+}
+
+.modal__botoes {
+  display: flex;
+  gap: 10px;
+}
+
+.modal__btn {
+  padding: 10px 22px;
+  border-radius: 8px;
+  font-size: 0.95rem;
+  cursor: pointer;
+  border: none;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.modal__btn--visitar {
+  background: var(--cor-principal);
+  font-family: var(--fonte-principal);
+  color: var(--branco);
+}
+
+.modal__btn--fechar {
+  background: var(--rosa-claro);
+  font-family: var(--fonte-principal);
+  color: #333;
+}

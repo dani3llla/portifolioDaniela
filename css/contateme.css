@@ -1,0 +1,70 @@
+.contato__link {
+    background-color: var(--cor-principal);
+    width: 7.625rem;
+    height: 7.875rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto;
+    margin-bottom: 1.875rem;
+    border-radius: 1.25rem;
+    gap: .9rem;
+    font-size: 1.2rem;
+    font-weight: 300;
+    color: var(--branco);
+    text-decoration: none;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.contato__img {
+    width: 3rem;
+    height: auto;
+}
+
+.contato__link:hover {
+    background-color: var(--rosa-hover);
+    transform: translateY(-5px);
+    cursor: pointer;
+}
+
+@media (min-width: 768px) {
+
+    .contatos {
+        display: flex;
+        flex-direction: row;
+        gap: 1.5rem;
+        justify-content: center;
+    }
+
+    .contato__link {
+        width: 10.625rem;
+        height: 9.875rem;
+        gap: 1.2rem;
+        font-size: 1.5rem;
+        flex: 0 0 10.875rem;
+        /* fixo em 270px, não cresce nem encolhe */
+        margin: 0;
+        /* remove o margin: 0 auto do mobile */
+        margin-bottom: 1rem;
+    }
+
+    .contato__img {
+        width: 4rem;
+    }
+}
+
+@media (min-width: 1400px) {
+    .contato__link {
+        margin-top: 2rem;
+        width: 12.625rem;
+        height: 11.875rem;
+        gap: 1.5rem;
+        font-size: 1.8rem;
+        flex: 0 0 12.625rem;
+    }
+
+    .contato__img {
+        width: 5rem;
+    }
+}

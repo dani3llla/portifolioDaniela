@@ -1,298 +1,294 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portfólio - Daniela Alves</title>
     <link rel="stylesheet" href="css/style.css">
+    <link rel="icon" href="assets/icons/cat_web_icon.png">
+    <title>Portfolio Daniela</title>
 
-
-    <link rel="shortcut icon" type="image/png" href="assets/sparkle_icon.png">
-    <style>
-        /* Estilos para o menu mobile */
-        .menu-toggle {
-            display: none;
-            flex-direction: column;
-            justify-content: space-between;
-            width: 30px;
-            height: 21px;
-            background: transparent;
-            border: none;
-            cursor: pointer;
-            padding: 0;
-            z-index: 20;
-            position: absolute;
-            right: 20px;
-            top: 50%;
-            transform: translateY(-50%);
-        }
-
-        .bar {
-            height: 3px;
-            width: 100%;
-            background-color: #e94f37;
-            border-radius: 10px;
-            transition: all 0.3s ease-in-out;
-        }
-
-        @media (max-width: 900px) {
-            .menu-toggle {
-                display: flex;
-            }
-
-            .menu {
-                position: fixed;
-                right: -100%;
-                top: 0;
-                width: 70%;
-                max-width: 300px;
-                height: 100vh;
-                background-color: #fff;
-                flex-direction: column;
-                padding-top: 80px;
-                transition: right 0.3s ease;
-                box-shadow: -5px 0 15px rgba(0, 0, 0, 0.1);
-                z-index: 10;
-                display: flex;
-            }
-
-            .menu.active {
-                right: 0;
-            }
-
-            .menu li {
-                margin: 10px 0;
-            }
-
-            .menu-toggle.active .bar:nth-child(1) {
-                transform: translateY(9px) rotate(45deg);
-            }
-
-            .menu-toggle.active .bar:nth-child(2) {
-                opacity: 0;
-            }
-
-            .menu-toggle.active .bar:nth-child(3) {
-                transform: translateY(-9px) rotate(-45deg);
-            }
-        }
-    </style>
-    <!-- Font Awesome for icons -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
-
-
+    <!-- Fontes -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
-        href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        href="https://fonts.googleapis.com/css2?family=Barriecito&family=Chelsea+Market&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
         rel="stylesheet">
-
 
 </head>
 
 <body>
     <header>
-        <div class="logo"><img src="assets/daniela_alves.PNG" alt="" width="200px"></div>
-        <button class="menu-toggle" aria-label="Menu">
-            <span class="bar"></span>
-            <span class="bar"></span>
-            <span class="bar"></span>
-        </button>
         <nav>
-            <ul class="menu">
-                <li><a href="#home">Home</a></li>
-                <li><a href="#mais">Sobre mim</a></li>
-                <li><a href="#projetos">Projetos</a></li>
-                <li><a href="#contate-me">Contato</a></li>
-            </ul>
+            <div class="esquerda">
+                <div class="logo_principal">
+                    <h2 class="logo">dani</h2>
+
+                    <img class="cat__logo__dani" src="assets/icons/cat_logo_dani.png" alt="Logo da Dani">
+                </div>
+            </div>
+
+            <div class="menu__sanduiche">
+                <span class="menu__sanduiche__line"></span>
+                <span class="menu__sanduiche__line"></span>
+                <span class="menu__sanduiche__line"></span>
+            </div>
+
+            <div class="esquerda_desktop">
+                <a class="link__menu" href="#sobre__mim">sobre mim</a>
+                <a class="link__menu" href="#secao__projetos">projetos</a>
+                <a class="link__menu" href="#contate__me">contato</a>
+            </div>
         </nav>
+
+        <div class="apresentacao_dani">
+            <div class="imagem_dani">
+                <img class="dani" src="assets/fotos/dani.jpeg" alt="Imagem da Dani">
+            </div>
+
+            <div class="textos__apresentacao">
+                <h1 class="apresentacao__titulo">Olá, sou a Daniela Alves</h1>
+                <p class="apresentacao__texto">
+                    Curiosa por natureza, movida por desafios e em constante evolução.
+
+                    Enxergo a tecnologia como um meio de transformar ideias em soluções reais — aquelas que facilitam,
+                    organizam e fazem sentido no dia a dia. Gosto de explorar, testar e aprender fazendo, porque é assim
+                    que tudo realmente se conecta.
+
+                    Mais do que ferramentas ou linguagens, me interesso pelo processo: entender problemas, pensar
+                    caminhos e construir algo que funcione de verdade.
+                </p>
+            </div>
+        </div>
     </header>
 
-    <section id="home" class="portfolio">
-        <div class="texto">
-            <img src="assets/bv.png" alt="" class="imgbv">
+    <main>
 
-            <p>Olá! Sou <span>Daniela Alves</span>, tenho 18 anos. Curso Análise e Desenvolvimento de Sistemas na FAM.
-                Sou formada em Desenvolvimento Web pelo IOS
-                (Instituto da Oportunidade Social). Concluí o PROA em 2025, desenvolvendo habilidades técnicas e
-                interpessoais. Busco oportunidades em
-                projetos desafiadores e inovadores.</p>
-            <div class="contact-icons center-icons">
-                <a href="mailto:1999dani.alves@gmail.com" title="Email"><i class="fas fa-envelope"></i></a>
-                <a href="https://github.com/dani3llla" target="_blank" title="GitHub"><i class="fab fa-github"></i></a>
-                <a href="https://instagram.com/daniiz.z" target="_blank" title="Instagram"><i
-                        class="fab fa-instagram"></i></a>
-                <a href="https://www.linkedin.com/in/daniela-alves-a83467334/" target="_blank" title="LinkedIn"><i
-                        class="fab fa-linkedin"></i></a>
-            </div>
-            <a href="#mais" class="btn">Saiba Mais</a>
-        </div>
+        <section id="sobre__mim" class="sobre__mim">
 
-        <div class="imagem">
-            <img src="assets/dani_anm3.png" alt="Foto de Daniela" />
-        </div>
-    </section>
+            <h2 class="sobre__mim__titulo">Sobre mim</h2>
 
+            <div class="sobremim_itens">
 
-    <div id="mais" class="container">
-        <div class="left">
-            <!-- Elementos decorativos -->
-            <img class="imgexperiencias" src="assets/dani_anm-Photoroom.png" alt="">
-            <!-- Cartão de visita fictício -->
+                                <div class="skills__linguagens">
 
-        </div>
-        <div class="right">
-            <div class="section">
-                <div class="section-title exp">EXPERIÊNCIAS</div>
-                <div class="item"><span class="star">✦</span>2025<br>
-                    <span class="item-title">TOTVS</span><br>
-                    Start Tech - Edição Back-End
+                        <div class="skills">
+                            <h2 class="titulo__experiencia_educacacao">
+                                Skills
+                            </h2>
+
+                            <div class="skills__lista">
+                                <div class="skills__item"><img class="skills__img" src="assets/icons/Icons Skills/Java.png"
+                                        alt="">Java</div>
+                                <div class="skills__item"><img class="skills__img" src="assets/icons/Icons Skills/HTML.png"
+                                        alt="">HTML</div>
+                                <div class="skills__item"><img class="skills__img" src="assets/icons/Icons Skills/CSS.png"
+                                        alt="">CSS</div>
+                                <div class="skills__item"><img class="skills__img"
+                                        src="assets/icons/Icons Skills/JavaScript.png" alt="">JavaScript</div>
+                                <div class="skills__item"><img class="skills__img"
+                                        src="assets/icons/Icons Skills/PostgreSQL.png" alt="">PostgreSQL</div>
+                                <div class="skills__item"><img class="skills__img" src="assets/icons/Icons Skills/Figma.png"
+                                        alt="">Figma</div>
+                                <div class="skills__item"><img class="skills__img" src="assets/icons/Icons Skills/Git.png"
+                                        alt="">Git</div>
+                            </div>
+                        </div>
+
+                        <div class="linguagens">
+
+                            <h2 class="titulo__experiencia_educacacao">
+                                Linguagens
+                            </h2>
+
+                            <div class="barra_portugues">
+                                <p class="linguagem__nome">Português</p>
+                                <div class="progresso__portugues">
+                                    <div class="progresso" style="width: 100%"></div>
+                                </div>
+                                <p class="linguagem__nivel">Nativo</p>
+                            </div>
+
+                            <div class="barra_portugues">
+                                <p class="linguagem__nome">Inglês</p>
+                                <div class="progresso__portugues">
+                                    <div class="progresso" style="width: 50%"></div>
+                                </div>
+                                <p class="linguagem__nivel">Intermediário</p>
+                            </div>
+
+                        </div>
+
                 </div>
-                <div class="item"><span class="star">✦</span>2025<br>
-                    <span class="item-title">Instituto da Oportunidade Social (IOS)</span><br>
-                    Desenvolvimento Web
+
+
+                <div class="sobre__mim__experiencia">
+
+                    <div class="experiencia">
+                        <h2 class="titulo__experiencia_educacacao">experiência/educação</h2>
+                        <div class="textos_experiencias">
+                            <div class="experiencia__item">
+                                <h3 class="experiencia__titulo">
+                                    <img class="icon_estrela" src="assets/icons/Estrela_4_pontas.png" alt="">
+                                    <span>2025</span>TOTVS & FIAP
+                                </h3>
+                                <p class="experiencia__descricao">
+                                    Start Tech - Edição Back-End
+                                </p>
+                            </div>
+
+                            <div class="experiencia__item">
+                                <h3 class="experiencia__titulo">
+                                    <img class="icon_estrela" src="assets/icons/Estrela_4_pontas.png" alt="">
+                                    <span>2025</span>Instituto da Oportunidade Social
+                                </h3>
+                                <p class="experiencia__descricao">
+                                    Desenvolvimento Web
+                                </p>
+                            </div>
+                            
+
+                            <div class="experiencia__item">
+                                <h3 class="experiencia__titulo">
+                                    <img class="icon_estrela" src="assets/icons/Estrela_4_pontas.png" alt="">
+                                    <span>2025</span>PROA
+                                </h3>
+                                <p class="experiencia__descricao">
+                                    Proa Online - Preparação para o mercado de trabalho
+                                </p>
+                            </div>
+
+                            
+                            <div class="experiencia__item">
+                                <h3 class="experiencia__titulo">
+                                    <img class="icon_estrela" src="assets/icons/Estrela_4_pontas.png" alt="">
+                                    <span>2025 - 2027</span> FAM
+                                </h3>
+                                <p class="experiencia__descricao">
+                                    Faculdade de Análise e Desenvolvimento de Sistemas
+                                </p>
+                            </div>
+                            
+                            <div class="experiencia__item">
+                                <h3 class="experiencia__titulo">
+                                    <img class="icon_estrela" src="assets/icons/Estrela_4_pontas.png" alt="">
+                                    <span>2026</span>Tempo
+                                </h3>
+                                <p class="experiencia__descricao">
+                                    Atendimento ao cliente
+                                </p>
+                            </div>
+                        </div>
+
+                    </div>
                 </div>
-                <div class="item"><span class="star">✦</span>2025<br>
-                    <span class="item-title">PROA</span><br>Proa Online - Preparação - Mercado de Trabalho
 
+
+            </div>
+        </section>
+
+        <section id="secao__projetos" class="secao__projetos">
+
+            <h2 class="sobre__mim__titulo">Meus Projetos</h2>
+
+            <div class="meus__projetos">
+
+
+
+                <div class="projeto__item">
+                    <img class="projeto__imagem" src="assets/projetos/loiane_training.png"
+                        alt="Projeto 1 - Loiane Training">
+
+                    <div class="textos__projeto">
+                        <h2 class="titulo__projeto">Loiane Training - Website</h2>
+                        <p class="texto__projeto">Projeto de conclusão de curso IOS</p>
+                    </div>
                 </div>
-            </div>
-            <hr>
-            <div class="section">
-                <div class="section-title edu">EDUCAÇÃO</div>
-                <div class="item"><span class="star">✦</span>2025-2027<br>
-                    <span class="item-title">FAM (Faculdade das Americas)</span><br>
-                    Análise e Desenvolvimento de Sistemas
-                    
+
+                <div class="projeto__item">
+                    <img class="projeto__imagem" src="assets/projetos/excelencia_capa.png" alt="Projeto 2 - ExcelencIA">
+
+                    <div class="textos__projeto">
+                        <h2 class="titulo__projeto">ExcelencIA - Website</h2>
+                        <p class="texto__projeto">Projeto desenvolvido durante o Bootcamp StartTech na TOTVS</p>
+                    </div>
                 </div>
-            </div>
-            <hr>
-            <div class="section">
-                <div class="section-title skills">SKILLS</div>
-                <div class="skills-list">
-                    <ul>
-                        <li><span class="star">✦</span><i class="fa-brands fa-java"></i></i> Java</li>
-                        <li><span class="star">✦</span><i class="fa-brands fa-python"></i></i></i> Python</li>
-                        <li><span class="star">✦</span><i class="fa-solid fa-database"></i> SQL (PostgreSQL, MySQL)</li>
-                        <li><span class="star">✦</span><i class="fab fa-html5" title="HTML"></i> HTML</li>
-                        <li><span class="star">✦</span><i class="fab fa-css3-alt" title="CSS"></i> CSS</li>
-                        <li><span class="star">✦</span><i class="fab fa-js" title="JavaScript"></i> JavaScript</li>
-                        <li><span class="star">✦</span><i class="fab fa-github" title="GitHub"></i> GitHub</li>
-                    </ul>
+
+                <div class="projeto__item">
+                    <img class="projeto__imagem" src="assets/projetos/clove_home.png" alt="Projeto 3 - Clove">
+
+                    <div class="textos__projeto">
+                        <h2 class="titulo__projeto">Clove - Website</h2>
+                        <p class="texto__projeto">Projeto pessoal inspirado na personagem Clove do Valorant</p>
+                    </div>
                 </div>
+                
             </div>
-        </div>
-    </div>
+
+            <button class="mais__projetos">mais</button>
+        </section>
 
 
 
-    <div id="projetos" class="projects-section">
-        <img class="projetos" src="assets/Meus_projetos.png" alt="">
-    </div>
 
 
-    <div class="project-grid">
-        <div class="project-card">
-            <img src="assets/Captura de Tela (1).png" alt="Projeto 2" class="project-preview"
-                onclick="openModal('Loiane Training Website', 'assets/loiane_fullwebsite.png', 'https://dani3llla.github.io/Website-loiane-training')">
-            <div class="project-info">
-                <h3 class="project-title">Loiane Training - Website</h3>
-                <p class="project-description">Projeto TCC IOS</p>
+
+        <section id="contate__me" class="contate__me">
+
+            <h2 class="sobre__mim__titulo">Contate-me</h2>
+            
+            <div class="contatos">
+
+                <a class="contato__link" href="https://github.com/dani3llla" target="_blank" rel="noopener noreferrer"> <img
+                        class="contato__img" src="assets/icons/Contato/Github.png" alt="">GitHub</a>
+
+
+
+                <a class="contato__link" href="https://linkedin.com/in/daniela-alves-a83467334/" target="_blank"
+                    rel="noopener noreferrer"> <img class="contato__img" src="assets/icons/Contato/LinkedIn.png"
+                        alt="">LinkedIn</a>
+
+
+
+
+
+                <a class="contato__link" href="mailto:1999dani.alves@gmail.com" target="_blank" rel="noopener noreferrer">
+                    <img class="contato__img" src="assets/icons/Contato/E-mail.png" alt="">E-mail</a>
+
             </div>
-        </div>
-        <div class="project-card">
-            <img src="assets/clove_home.png" alt="Clove Project" class="project-preview"
-                onclick="openModal('Clove Website', 'assets/clove_fullwebsite.png', 'https://valorant-clove.vercel.app/')">
-            <div class="project-info">
-                <h3 class="project-title">Clove Valorant - Website</h3>
-                <p class="project-description">Site temático sobre a personagem Clove do Valorant.</p>
-            </div>
-        </div>
-        <div class="project-card">
-            <img src="assets/Captura de Tela (3).png" alt="Stardew Valley - Website" class="project-preview"
-                onclick="openModal('Stardew Valley - Website', 'assets/stardew_fullpage.png', 'https://dani3llla.github.io/Atividade-CSS')">
-            <div class="project-info">
-                <h3 class="project-title">Stardew Valley - Website</h3>
-                <p class="project-description">Site inspirado no jogo Stardew Valley.</p>
-            </div>
-        </div>
-        <div class="project-card">
-            <img src="assets/nintendo_website.PNG" alt="Projeto 4" class="project-preview"
-                onclick="openModal('Nintendo Switch 2 - Website', 'assets/nintendo_fullpage.png', 'https://dani3llla.github.io/Pagina-flexbox')">
-            <div class="project-info">
-                <h3 class="project-title">Nintendo Switch 2 - Website</h3>
-                <p class="project-description">Página fictícia de lançamento do Nintendo Switch 2.</p>
-            </div>
-        </div>
-        <div class="project-card">
-            <img src="assets/excelencia_capa.png" alt="Projeto 5" class="project-preview"
-                onclick="openModal('Nintendo Switch 2 - Website', 'assets/excelencia_website.png', 'https://projeto-excelencia-start-tech.vercel.app/')">
-            <div class="project-info">
-                <h3 class="project-title">ExcelencIA - Website</h3>
-                <p class="project-description">Projeto desenvolvido durante o Start Tech na TOTVS</p>
-            </div>
-        </div>
-    </div>
-
-    <div class="modal-overlay" id="modalOverlay" onclick="closeModal(event)">
-        <div class="modal" onclick="event.stopPropagation()">
-            <div class="modal-header">
-                <h2 class="modal-title" id="modalTitle">Preview do Projeto</h2>
-                <button class="btn-close" onclick="closeModal()">&times;</button>
-            </div>
-            <div class="modal-body">
-                <img id="websitePreview" src="" alt="Website Preview" class="website-preview">
-            </div>
-            <div class="modal-footer">
-                <button class="btn btn-secondary" onclick="closeModal()">Fechar</button>
-                <a id="visitSite" href="#" target="_blank" class="btn btn-visit">Visitar Site</a>
-            </div>
-        </div>
-    </div>
+        </section>
 
 
 
 
+    </main>
 
+    <footer>
 
-
-
-
-
-
-    <section id="contate-me" class="contact-section">
-        <div class="contate"><img src="assets/contate_me.png" alt=""></div>
-        <div class="contact-list">
-            <div class="contact-item">
-                <i class="fas fa-envelope"></i>
-                <a href="mailto:1999dani.alves@gmail.com">Email: 1999dani.alves@gmail.com</a>
-            </div>
-            <div class="contact-item">
-                <i class="fab fa-linkedin"></i>
-                <a href="https://www.linkedin.com/in/daniela-alves-a83467334/" target="_blank">LinkedIn: Daniela
-                    Alves</a>
-            </div>
-            <div class="contact-item">
-                <i class="fab fa-github"></i>
-                <a href="https://github.com/dani3llla" target="_blank">GitHub: dani3llla</a>
-            </div>
-            <div class="contact-item">
-                <i class="fab fa-instagram"></i>
-                <a href="https://instagram.com/daniiz.z" target="_blank">Instagram: @daniiz.z</a>
-            </div>
-        </div>
-    </section>
-
-    <footer id="contato" class="footer">
-        <div class="footer-content">
-            <p>&copy; 2025 Daniela Alves. Todos os direitos reservados.</p>
-        </div>
     </footer>
 
+    <!-- Modal -->
+    <div class="modal__overlay" id="modalOverlay">
+        <div class="modal__container">
+            <button class="modal__fechar" id="modalFechar">&times;</button>
 
+            <div class="modal__preview">
+                <img class="modal__imagem" id="modalImagem" src="" alt="">
+            </div>
 
-    <script src="js/script.js"></script>
+            <div class="modal__rodape">
+                <h3 class="modal__titulo" id="modalTitulo"></h3>
+                <p class="modal__descricao" id="modalDescricao"></p>
+                <div class="modal__botoes">
+                    <a class="modal__btn modal__btn--visitar" id="modalLink" href="#" target="_blank">Visitar Site</a>
+                    <button class="modal__btn modal__btn--fechar" id="modalFecharBtn">Fechar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="js/main.js"></script>
+
 </body>
 
 </html>
