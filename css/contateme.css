@@ -57,14 +57,14 @@
 @media (min-width: 1400px) {
     .contato__link {
         margin-top: 2rem;
-        width: 12.625rem;
-        height: 11.875rem;
-        gap: 1.5rem;
-        font-size: 1.8rem;
-        flex: 0 0 12.625rem;
+        width: 10.875rem;
+        height: 10.125rem;
+        gap: 1.2rem;
+        font-size: 1.55rem;
+        flex: 0 0 10.875rem;
     }
 
     .contato__img {
-        width: 5rem;
+        width: 4.2rem;
     }
 }

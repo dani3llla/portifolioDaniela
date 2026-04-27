@@ -46,7 +46,7 @@ body {
 
 @media (min-width: 1080px) {
     body {
-        padding: 1.5rem 6rem 14rem 6rem;
+        padding: 1.5rem 4rem 14rem 4rem;
         background-image: url(../assets/background/Background_Desktop.svg);
 
     }

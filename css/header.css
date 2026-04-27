@@ -153,7 +153,7 @@ nav {
         display: flex;
         gap: 0.8rem;
         background-color: var(--branco);
-        padding: 0.5rem;
+        padding: 0.4rem;
         border-radius: 10rem;
         margin-right: 2rem;
     }
@@ -163,8 +163,8 @@ nav {
         text-decoration: none;
         color: var(--branco);
         font-family: var(--fonte-secundaria);
-        font-size: 1.6rem;
-        padding: 0.9rem 2rem;
+        font-size: 1.3rem;
+        padding: 0.6rem 1.3rem;
         border-radius: 10rem;
     }
 
@@ -178,7 +178,7 @@ nav {
     .logo {
         margin-left: 2rem;
         font-family: var(--fonte-logo);
-        font-size: 4rem;
+        font-size: 3rem;
         color: var(--branco);
         box-shadow: var(--sombra);
     }
@@ -187,7 +187,7 @@ nav {
         font-family: var(--fonte-secundaria);
         color: var(--branco);
         box-shadow: var(--sombra);
-        width: 8rem;
+        width: 6rem;
     }
 
     .apresentacao_dani {
@@ -203,18 +203,19 @@ nav {
     }
 
     .dani {
-        width: 90%;
-        height: 35rem;
+        width: 76%;
+        height: 30rem;
     }
 
     .apresentacao__titulo {
-        font-size: 3rem;
+        font-size: 2.5rem;
         box-shadow: var(--sombra);
     }
 
     .apresentacao__texto {
-        font-size: 1.5rem;
+        font-size: 1.3rem;
         font-weight: 300;
-        max-width: 40rem;
+        max-width: 35rem;
+
     }
 }

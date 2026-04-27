@@ -81,9 +81,9 @@
 
 @media (min-width: 1400px) {
   .projeto__item {
-    flex: 0 0 30rem;
+    flex: 0 0 23rem;
     width: 60rem;
-    height: 25rem;
+    height: 21rem;
   }
 
   .titulo__projeto {
@@ -96,7 +96,7 @@
 
   .mais__projetos {
     margin-top: 1.6rem;
-    padding: 0.7rem 3.2rem;
-    font-size: 2rem;
+    padding: 0.7rem 2.6rem;
+    font-size: 1.4rem;
   }
 }
